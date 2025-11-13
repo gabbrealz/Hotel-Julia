@@ -1,0 +1,9 @@
+Receptionist extends Employee
+    - Handles walk-in or phone call bookings (Guest account is optional but not needed)
+        - If the guest has an account, they can give their email so that booking history will be recorded
+    - Search/view bookings
+    - Edit/cancel bookings
+    - Checkin/Checkout guests
+    - Quick guest registration for walk-ins or phone call (Optional if the guest chooses it)
+    - Filter to make finding specific rooms easier
+    - Live notifications for when the a guest makes a booking via web app

@@ -1,0 +1,26 @@
+Room attributes
+    - room number
+    - room type
+    - bed configuration code (bed types and bed counts) (string)
+    - area (string)
+    - smoking allowed
+    - max adults
+    - max children
+    - price
+    - status (available, dirty, out of service)
+    - last cleaned (date)
+
+
+Room Amenities Table
+    - room number
+    - amenity id (is add-on == false)
+
+
+Amenities Table
+    - id
+    - name
+    - is add-on
+    - unit (per night, per stay, per person)
+    - price
+    - max quantity
+    - is available

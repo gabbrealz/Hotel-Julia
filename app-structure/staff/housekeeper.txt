@@ -1,0 +1,6 @@
+Housekeeper extends Employee
+    - Each employee can view their assigned tasks daily
+        - For each task, they should be able to view task schedule
+            - When to clean the room, when was the last checkin and when the next checkin will occur
+    - Be able to change room status (Cleaned, Dirty, Out of Service)
+    - Be able to add cleaning notes

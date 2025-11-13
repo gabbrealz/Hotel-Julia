@@ -1,0 +1,10 @@
+[DATA] Shift Schedules Table
+    - id
+    - staff id
+    - shift type (day, afternoon, night)
+    - shift date
+    - start time
+    - end time
+    - clocked-in at
+    - clocked-out at
+    - status (scheduled, completed, missed, cancelled)

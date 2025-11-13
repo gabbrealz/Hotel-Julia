@@ -1,0 +1,10 @@
+User
+    - Login & Logout
+    - View profile info
+
+Employee extends User
+    - Each action performed by an employee should be recorded in an audit trail (logs)
+    - Clock in & Clock out system
+
+
+[RULE] Pricing data type: NUMERIC(11,2) / BigDecimal

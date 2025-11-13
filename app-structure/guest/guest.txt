@@ -1,0 +1,48 @@
+Guest extends User
+    / During account registration, validate user input
+    - Search availability
+        - Filter/search rooms by category, price, capacity
+    - View room details
+    - Create booking through web app
+        - Choose check-in and check-out dates
+        - Select specific room
+        - Add special requests
+    - View booking history (current, past, upcoming)
+    - Cancel or modify a booking
+        - System must know when to let the user perform this action
+    - Guest feedback
+    - Save guest preferences
+
+    - Booking confirmation emails
+    - Password reset links
+    - Guest receipts/invoices
+
+
+[FRONTEND] Guest account nav bar:
+    - home
+    - about
+    - rooms
+    - amenities
+
+
+[CONCEPT] Planner:
+    - Each guest has a planner, kind of like a cart system in e-commerce websites.
+    - These planners contain trips, each one stores the rooms that the user plans to book.
+    - Each trip has a fixed checkin and checkout date.
+
+
+[PROCESS] Guest makes a booking:
+    1. Start a new trip.
+    2. Confirm the check-in and check-out dates before proceeding.
+        - Check-in time must be 2:00 PM. Check-out time must be 12:00 PM.
+        - Guest must start a new trip or overwite the current one if they want to change these dates.
+        - Guest cannot have trips with overlapping dates.
+    3. Guest searches for hotel rooms by room type (only room types with available rooms will be shown).
+        - Before the user adds the room to the trip, they can already add some amenities with the room.
+        - Frontend should have a "Add another room with the same type and amenities"
+        - Frontend should display how many rooms of the same room type are still available.
+    4. Guest goes to their planner, views the trip they created.
+        - Everything is editable aside from the checkin and checkout date of the trip
+        - Should have a Save & Exit button
+        - Guest should see a breakdown of costs before completing the booking
+    5. Guest completes the booking, they must add their credit card info for hotel security.

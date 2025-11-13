@@ -1,0 +1,26 @@
+Booking attributes
+    - id
+    - guest id (if booked by guest)
+    - receptionist id (if booked by receptionist)
+    - guest name
+    - guest contact
+    - room number
+    - no. of adults
+    - no. of children
+    - check-in date
+    - check-out date
+
+    - total price
+    - payment method
+    - payment status (pending, paid, refunded, cancelled)
+    - paid at
+
+    - status (booked, checked in, checked out, cancelled, no-show)
+    - checked-in at
+    - checked-out at
+    - created at
+
+
+Booking Add-ons Table
+    - booking id
+    - amenity id (is add-on == true)
