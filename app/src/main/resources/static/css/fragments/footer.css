@@ -1,0 +1,32 @@
+footer {
+    background-color: #665430;
+    color: white;
+    height: 11.4rem;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.footer-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-family: "ModernFont";
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-group i {
+    margin-right: 0.5rem;
+}

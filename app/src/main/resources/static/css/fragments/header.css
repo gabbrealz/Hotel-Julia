@@ -1,0 +1,164 @@
+header {
+    height: 3.5rem;
+    background-color: #665430;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#landing-page-anchor {
+    color: white;
+    font-size: 2rem;
+    font-family: "ModernFont";
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 3rem;
+    transition: color 0.2s ease-in;
+}
+
+#landing-page-anchor:hover {
+    color: #cec4b8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+nav a {
+    position: relative;
+    padding: 1rem;
+    font-family: "ModernSans-Light", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in, transform 0.2s ease-in;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #ddd;
+    transform: scale(1.03);
+}
+
+nav a.active {
+    font-weight: bold;
+    font-size: 1.55rem;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: width 1s ease-in;
+}
+
+#sign-in-btn {
+    background-color: #514426;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-family: "ModernSans-Light", sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, transform 0.2s ease-out;
+    white-space: nowrap;
+    margin-left: 2.5rem;
+    margin-right: 0.75rem;
+}
+
+#sign-in-btn:hover {
+    background-color: #978760;
+    transform: scale(1.02);
+}
+
+#profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+#profile-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.1s ease-in, transform 0.1s ease-in, border-color 0.1s ease-in;
+    margin-left: 2.5rem;
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#profile-btn:hover {
+    color: #ddd;
+    border-color: #ddd;
+    transform: scale(1.05);
+}
+
+#profile-popup {
+    font-family: 'ModernSans-Light';
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#profile-popup.hidden {
+    display: none;
+}
+
+#profile-popup a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #707070;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#profile-popup a:hover {
+    color: #434343;
+}
+
+#logout-button {
+    width: 100%;
+    background-color: #423b32;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#logout-button:hover {
+    background-color: #645b4f;
+}

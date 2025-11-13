@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Julia</title>
+
+    <link rel="stylesheet" th:href="@{/css/public/global.css}">
+    <link rel="stylesheet" th:href="@{/css/public/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/public/landing-page.css}">
+</head>
+
+<body>
+
+
+
+<th:block th:replace="~{fragments/header-footer::footer}"></th:block>
+
+
+<script th:src="@{/js/auth/toggle-password.js}"></script>
+
+<th:block th:replace="~{fragments/header-footer::header-js}"></th:block>
+<th:block th:replace="~{fragments/js::global}"></th:block>
+
+</body>
+</html>

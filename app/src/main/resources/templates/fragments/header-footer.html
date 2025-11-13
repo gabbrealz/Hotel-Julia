@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<header th:fragment="header">
+
+    <a th:href="@{/}" id="landing-page-anchor">HOTEL JULIA</a>
+
+    <nav>
+        <a th:href="@{/home}" th:classappend="${requestURI.startsWith('/home')} ? 'active' : ''">HOME</a>
+    </nav>
+
+    <a th:href="@{/login}" sec:authorize="isAnonymous()" id="sign-in-btn">
+        Sign in
+    </a>
+    <div sec:authorize="isAuthenticated()" id="profile-container">
+        <button id="profile-btn">
+            <i class="fa-regular fa-user"></i>
+        </button>
+
+        <div id="profile-popup" class="popup hidden">
+            <a th:href="@{/profile}">YOUR PROFILE</a>
+            <a th:href="@{/cart}">YOUR CART</a>
+
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" id="logout-button">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const profileBtn = document.getElementById('profile-btn');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileBtn?.addEventListener('click', () => {
+            profilePopup.classList.toggle('hidden');
+        });
+    </script>
+
+</header>
+
+
+<footer th:fragment="footer">
+
+    <div class="footer-content">
+        <h2>HOTEL<br>JULIA</h2>
+
+        <div class="footer-group">
+            <p>One Rizal Park, Ermita,<br>Manila, 0913 Metro Manila</p>
+            <p>+63 2 8527 0011</p>
+            <p>+63 2 5301 5500</p>
+        </div>
+
+        <div class="footer-group">
+            <p>About Us</p>
+            <p>Terms of Service</p>
+            <p>FAQs</p>
+        </div>
+
+        <div class="footer-group">
+            <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            <p><i class="fa-brands fa-facebook-f"></i> Facebook</p>
+            <p><i class="fa-brands fa-x-twitter"></i> Twitter</p>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

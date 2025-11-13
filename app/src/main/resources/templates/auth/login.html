@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in - Hotel Julia</title>
+
+    <link rel="stylesheet" th:href="@{/css/public/global.css}">
+    <link rel="stylesheet" th:href="@{/css/public/all.min.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/auth/login.css}">
+</head>
+<body>
+
+<th:block th:replace="~{fragments/header-footer::header}"></th:block>
+
+<div class="login-container">
+    <div class="login-box">
+        <h2>Sign in</h2>
+        <form th:action="@{/login}" method="post">
+
+            <input type="email" name="username" placeholder="Email" required>
+
+            <div class="password-wrapper">
+                <input type="password" name="password" placeholder="Password" required id="password-input">
+                <i class="fa-regular fa-eye-slash toggle-password" id="password-icon" onclick="togglePassword('password-input', 'password-icon')"></i>
+            </div>
+
+            <label class="remember-me">
+                <input type="checkbox" name="remember-me"> Remember me
+            </label>
+
+            <p th:if="${param.error}" class="error-message">
+                Invalid username or password.
+            </p>
+
+            <button type="submit" class="standard-button">Sign in</button>
+        </form>
+
+        <span class="create-account-caption">
+            Don't have an account?  
+            <a th:href="@{/sign-up}">Sign up</a>
+        </span>
+    </div>
+</div>
+
+<th:block th:replace="~{fragments/header-footer::footer}"></th:block>
+
+<script th:src="@{/js/auth/toggle-password.js}"></script>
+
+<th:block th:replace="~{fragments/js::global}"></th:block>
+
+</body>
+</html>
