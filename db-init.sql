@@ -9,7 +9,7 @@ CREATE TABLE users."user" (
     email TEXT UNIQUE NOT NULL,
     phone_number TEXT NOT NULL,
     address TEXT,
-    role TEXT NOT NULL 
+    role TEXT NOT NULL,
     CHECK (role = ANY(ARRAY[
         'GUEST'::TEXT,'MANAGER'::TEXT,'RECEPTIONIST'::TEXT,'HOUSEKEEPING'::TEXT,'MAINTENANCE'::TEXT
     ]))
