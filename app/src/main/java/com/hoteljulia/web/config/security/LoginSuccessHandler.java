@@ -31,7 +31,6 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         User.Role userRole = ((CustomUserDetails) authentication.getPrincipal()).getUser().getRole();
 
         String redirectURL = request.getContextPath();
-
         switch (userRole) {
             case MANAGER -> redirectURL += "/manager/dashboard";
             case RECEPTIONIST -> redirectURL += "/receptionist/dashboard";
