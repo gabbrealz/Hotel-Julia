@@ -1,5 +1,3 @@
--- USER SCHEMA =======================================================================================
-
 CREATE SCHEMA users;
 
 CREATE TABLE users."user" (
@@ -37,7 +35,3 @@ CREATE TABLE users.guest (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
--- ===================================================================================================
-
-CREATE SCHEMA hotel;
